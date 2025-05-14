@@ -34,7 +34,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Mention  me with a topic  like '@Binary_Joke_Bot python', to get some funny jokes.")
 
 async def generate_joke(update: Update, context: ContextTypes.DEFAULT_TYPE, topic: str):
-    await update.message.reply_text("Generate a Joke about {topic}")
+    await update.message.reply_text(f"Generate a Joke about {topic}")
     joke= setup_llm_chain(topic).invoke({}).strip()
     await update.message.reply_text(joke)
 
