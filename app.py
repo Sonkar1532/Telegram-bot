@@ -1,11 +1,11 @@
 import os # operating system
 import re # regular expression
 from dotenv import load_dotenv # load environment variables
-from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes # telegram bot framework
-from langchain_groq import ChatGroq 
-from langchain_core.prompts import ChatPromptTemplate # langchain prompt template
-from langchain_core.output_parsers import StrOutputParser # langchain output parser
+from telegram import Update # type: ignore
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes # type: ignore # telegram bot framework
+from langchain_groq import ChatGroq  # type: ignore
+from langchain_core.prompts import ChatPromptTemplate # type: ignore # langchain prompt template
+from langchain_core.output_parsers import StrOutputParser # type: ignore # langchain output parser
 
 load_dotenv()
 
