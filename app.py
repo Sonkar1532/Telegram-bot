@@ -43,7 +43,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     bot_username = context.bot.username
 
     if f'@{bot_username}' in msg:
-        match  =re.search(f'@{bot_username}\\s+(.*)', msg)
+        match  =re.search(f'@{bot_username}\\s+(.*)',msg)
         if match and match.group(1).strip():
             await generate_joke(update, context, match.group(1).strip())
         else:
